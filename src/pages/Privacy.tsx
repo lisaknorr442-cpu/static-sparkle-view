@@ -1,8 +1,18 @@
+import { Helmet } from "react-helmet";
 import { Card } from "@/components/ui/card";
+import AdSense from "@/components/AdSense";
 
 const Privacy = () => {
   return (
-    <div className="container mx-auto p-6 max-w-4xl">
+    <>
+      <Helmet>
+        <title>Privacy Policy - HTML Online Viewer</title>
+        <meta name="description" content="Read our privacy policy to understand how HTML Online Viewer handles your data. We process all HTML in your browser with no data collection." />
+        <link rel="canonical" href="https://yourdomain.com/privacy" />
+      </Helmet>
+      
+      <div className="container mx-auto p-6 max-w-4xl">
+        <AdSense slot="top" className="mb-6" />
       <Card className="p-8 bg-card/80 backdrop-blur-sm">
         <h1 className="text-4xl font-bold mb-6 text-primary">Privacy Policy</h1>
         <div className="space-y-6 text-foreground">
@@ -83,7 +93,10 @@ const Privacy = () => {
           </div>
         </div>
       </Card>
+      
+      <AdSense slot="bottom" className="mt-6" />
     </div>
+    </>
   );
 };
 

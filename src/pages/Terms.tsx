@@ -1,8 +1,18 @@
+import { Helmet } from "react-helmet";
 import { Card } from "@/components/ui/card";
+import AdSense from "@/components/AdSense";
 
 const Terms = () => {
   return (
-    <div className="container mx-auto p-6 max-w-4xl">
+    <>
+      <Helmet>
+        <title>Terms of Service - HTML Online Viewer</title>
+        <meta name="description" content="Read the terms of service for HTML Online Viewer. Understand your rights and responsibilities when using our free HTML editor tool." />
+        <link rel="canonical" href="https://yourdomain.com/terms" />
+      </Helmet>
+      
+      <div className="container mx-auto p-6 max-w-4xl">
+        <AdSense slot="top" className="mb-6" />
       <Card className="p-8 bg-card/80 backdrop-blur-sm">
         <h1 className="text-4xl font-bold mb-6 text-primary">Terms of Service</h1>
         <div className="space-y-6 text-foreground">
@@ -94,7 +104,10 @@ const Terms = () => {
           </div>
         </div>
       </Card>
+      
+      <AdSense slot="bottom" className="mt-6" />
     </div>
+    </>
   );
 };
 

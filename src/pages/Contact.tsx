@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Github, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 import { useState } from "react";
+import AdSense from "@/components/AdSense";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +24,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 max-w-4xl">
+    <>
+      <Helmet>
+        <title>Contact Us - HTML Online Viewer Support</title>
+        <meta name="description" content="Get in touch with HTML Online Viewer team. Ask questions, report bugs, or suggest features. We're here to help with your HTML editing needs." />
+        <link rel="canonical" href="https://yourdomain.com/contact" />
+      </Helmet>
+      
+      <div className="container mx-auto p-6 max-w-4xl">
+        <AdSense slot="top" className="mb-6" />
       <Card className="p-8 bg-card/80 backdrop-blur-sm mb-6">
         <h1 className="text-4xl font-bold mb-6 text-primary">Contact Us</h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -139,7 +149,10 @@ const Contact = () => {
           </div>
         </div>
       </Card>
+      
+      <AdSense slot="bottom" className="mt-6" />
     </div>
+    </>
   );
 };
 

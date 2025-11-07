@@ -1,5 +1,7 @@
+import { Helmet } from "react-helmet";
 import { Card } from "@/components/ui/card";
 import { Code2, Zap, Shield, Sparkles } from "lucide-react";
+import AdSense from "@/components/AdSense";
 
 const About = () => {
   const features = [
@@ -26,7 +28,15 @@ const About = () => {
   ];
 
   return (
-    <div className="container mx-auto p-6 max-w-4xl">
+    <>
+      <Helmet>
+        <title>About HTML Online Viewer - Free HTML Editor Tool</title>
+        <meta name="description" content="Learn about HTML Online Viewer - the free online HTML editor with live preview. Discover features, benefits, and how our tool helps developers test HTML code instantly." />
+        <link rel="canonical" href="https://yourdomain.com/about" />
+      </Helmet>
+      
+      <div className="container mx-auto p-6 max-w-4xl">
+        <AdSense slot="top" className="mb-6" />
       <Card className="p-8 bg-card/80 backdrop-blur-sm mb-6">
         <h1 className="text-4xl font-bold mb-6 text-primary">About HTML Online Viewer</h1>
         <div className="space-y-6 text-foreground">
@@ -80,7 +90,10 @@ const About = () => {
           and feature requests from the community. Together, we can make this tool even better.
         </p>
       </Card>
+      
+      <AdSense slot="bottom" className="mt-6" />
     </div>
+    </>
   );
 };
 

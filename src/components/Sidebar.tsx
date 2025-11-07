@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import AdSense from "@/components/AdSense";
 import { 
   Eye, 
   Code2, 
@@ -85,6 +86,11 @@ const Sidebar = ({ onAction }: SidebarProps) => {
                   {item.label}
                 </Button>
               ))}
+            </div>
+            
+            {/* AdSense Sidebar Ad */}
+            <div className="mt-8 px-2">
+              <AdSense slot="sidebar" />
             </div>
           </>
         )}
