@@ -102,7 +102,7 @@ const HtmlViewer = ({ onAction }: HtmlViewerProps) => {
           value={htmlCode}
           onChange={(e) => setHtmlCode(e.target.value)}
           placeholder="Put your HTML text here"
-          className="flex-1 font-mono text-sm bg-editor-bg resize-none"
+          className="flex-1 font-mono text-sm bg-editor-bg text-foreground resize-none"
           style={{ minHeight: "500px" }}
         />
       </div>
